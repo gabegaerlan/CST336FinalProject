@@ -100,7 +100,6 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="guest.php">Guest</a></li>
           <li><a href="#">Cars</a></li>
           <li><a href="#">Parts</a></li>
         </ul>
