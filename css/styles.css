@@ -9,3 +9,39 @@ body{
     text-align:center;
     font-family: 'Fugaz One', cursive;
 }
+
+h2{
+    font-family: 'Fugaz One', cursive;
+    color:white;
+    text-align:center;
+}
+.addCar{
+    text-align: center;
+}
+.adminMain{
+    font-family: 'Fugaz One', cursive;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.addCar{
+    text-align: center;
+    font-family: 'Fugaz One', cursive;
+    
+}

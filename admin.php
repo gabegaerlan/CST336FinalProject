@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {  //checks whether the admin is logged in
 function userList(){
   include './database.php';
   $conn = getDatabaseConnection();
-  
+ 
   $sql = "SELECT *
           FROM users
           WHERE 1";
@@ -16,10 +16,8 @@ function userList(){
   $stmt->execute();
   $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
    
-  //print_r($records);
   return $records;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +27,7 @@ function userList(){
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
@@ -57,8 +55,8 @@ function userList(){
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Cars</a></li>
+          <li><a href="#">Parts</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">
@@ -77,40 +75,64 @@ function userList(){
       </div>
     </nav>
     <!--End Navigation Bar-->
+    
     <h2> Welcome <?=$_SESSION['adminName']?>!</h2>
+    
+    
+
+    
+    
     
     </body>
 </html>
 
-        <?php
-          $users = userList();
-          foreach($users as $user) 
-          {
-                echo $user['id'] . "  " . $user['firstName'] . " " . $user['lastName'];
-                //  echo "[<a href='updateUser.php?userId=".$user['id']."'> Update </a>] ";
-                //  echo "[<a onclick='return confirmDelete()' href='deleteUser.php?userId=".$user['id']."'> Delete </a>] <br />";
-          }
-        ?>
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--    <head>-->
-<!--        <title>Admin Main Page </title>-->
 
-<!--    </head>-->
-<!--    <body>-->
-
-<!--            <h1> Admin Main </h1>-->
+         
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            @import url("css/styles.css");
+            h1{
+              color:white;
+              font-family: 'Fugaz One', cursive;
+              text-align:center;
+            }
+            
+        </style>
+    </head>
+    <body>
+            <h1>Admin Main</h1>
 
             
-<!--            <form action="addUser.php">-->
+            <!--<form action="addUser.php">-->
                 
-<!--                <input type="submit" value="Add New User" />-->
+            <!--    <input type="submit" value="Add New User" />-->
                 
-<!--            </form>-->
-
-<!--            <br />-->
+            <!--</form>-->
             
+            <form action="addCar.php" class="addCar">
+                <center><input type="submit" value="Add New Car" /></center>
+            </form>
 
-            
-<!--    </body>-->
-<!--</html>-->
+            <br />
+          <?php
+         include'display.php';
+        //   $users = userList();
+        //   foreach($users as $user) 
+        //   {
+        //         echo $user['id'] . "  " . $user['firstName'] . " " . $user['lastName'];
+        //         //  echo "[<a href='updateUser.php?userId=".$user['id']."'> Update </a>] ";
+        //         //  echo "[<a onclick='return confirmDelete()' href='deleteUser.php?userId=".$user['id']."'> Delete </a>] <br />";
+        //   }
+          displayAll();
+         ?>
+     
+    </body>
+</html>

@@ -21,8 +21,9 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
+          <li><a href="guest.php">Guest</a></li>
+          <li><a href="#">Cars</a></li>
+          <li><a href="#">Parts</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">
