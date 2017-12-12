@@ -10,7 +10,7 @@
         <style>
             @import url("css/styles.css");
             h1{
-              color:white;
+              color:black;
               font-family: 'Fugaz One', cursive;
               text-align:center;
             }
@@ -19,7 +19,7 @@
             }
             .generatedReports{
                 font-size:3em;
-                color:white;
+                color:black;
                 font-family: 'Fugaz One', cursive;
                 
             }

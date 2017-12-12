@@ -1,5 +1,5 @@
 body{
-    background-image: url("public/finalproject/img/typer.png");
+    background-image: url("/finalproject/img/typer.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -12,7 +12,7 @@ body{
 
 h2{
     font-family: 'Fugaz One', cursive;
-    color:white;
+    color:black;
     text-align:center;
 }
 .addCar{

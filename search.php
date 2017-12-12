@@ -5,22 +5,47 @@
     </head>
     <body>
         <?php
+        session_start();
         include'./database.php';
         $conn = getDatabaseConnection();
-        $sql = "SELECT * 
-                FROM cars
-                JOIN parts
-                JOIN companies";
-        $statement = $conn->prepare($sql);
-        $statement->execute();
-        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
-        if ($_GET['sort'] == 'desc') {
-            $sql .= " ORDER BY carName desc";
-        }
-        if ($_GET['sort'] == 'asc') {
-            $sql .= " ORDER BY carName asc";
-        }
         
+        function searchCars()
+        {
+            global $conn;
+            $np = array();
+            
+            $sql = "SELECT carName, carType, carCompany
+                    FROM cars
+                    WHERE 1";
+            if(isset($_GET['submit']))
+            {
+                if(isset($_GET['search']))
+                {
+                    $sql .=" AND carName LIKE :carName";
+                    $np[':carName'] = "%".$_GET['search']."%";
+                }
+                if(isset($_GET['search']))
+                {
+                    $sql .=" AND carType LIKE :carType";
+                    $np[':carType'] = "%".$_GET['search']."%";
+                }
+                if(isset($_GET['search']))
+                {
+                    $sql .=" AND carCompany LIKE :carCompany";
+                    $np[':carCompany'] = "%".$_GET['search']."%";
+                }
+                
+            }
+            $stmt = $conn->prepare($sql);
+            $stmt->execute($np);
+            $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+            
+            return $records;
+            // foreach($records as $r)
+            // {
+                
+            // }
+        }
         ?>
     </body>
 </html>
