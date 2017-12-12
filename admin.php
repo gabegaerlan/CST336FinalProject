@@ -32,6 +32,13 @@ function userList(){
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             @import url("css/styles.css");
+            body{
+                background-image: url("/finalproject/img/typer.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+            }
+
         </style>
         
         

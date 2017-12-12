@@ -67,6 +67,12 @@ if(isset($_GET['carId'])){
                 text-align:center;
                 font-family: 'Fugaz One', cursive;
             }
+                        body{
+                background-image: url("/finalproject/img/typer.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+            }
         </style>
     </head>
     <body>

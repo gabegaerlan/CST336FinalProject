@@ -3,6 +3,12 @@
     <head>
        <style>
            @import url("css/styles.css");
+                       body{
+                background-image: url("/finalproject/img/typer.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center; 
+            }
        </style> 
     </head>
     
