@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
-            @import url("css/styles.css");
+            @import url("public/finalproject/css/styles.css");
                         body{
                 background-image: url("/finalproject/img/typer.jpg");
                 background-repeat: no-repeat;
