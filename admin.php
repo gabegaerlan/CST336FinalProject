@@ -37,10 +37,7 @@ function userList(){
         
         <!--JAVASCRIPT-->
         <script>
-            function confirmDelete() 
-            {
-                return confirm("Are you sure you want to delete this user?");
-            }
+
         </script>
         <!--JAVASCRIPT END-->
         
@@ -54,9 +51,9 @@ function userList(){
           <a class="navbar-brand" href="#">Auto Mall</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="#">Cars</a></li>
-          <li><a href="#">Parts</a></li>
+          <li class="active"><a href="admin.php">Home</a></li>
+          <li><a href="carPage.php">Cars</a></li>
+          <li><a href="partsPage.php">Parts</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">
@@ -108,6 +105,7 @@ function userList(){
         </style>
     </head>
     <body>
+      <div class="admin">
             <h1>Admin Main</h1>
 
             
@@ -120,18 +118,16 @@ function userList(){
             <form action="addCar.php" class="addCar">
                 <center><input type="submit" value="Add New Car" /></center>
             </form>
-
+            
+            <form action="delete.php" class="deleteCar">
+              <center><input type="submit" value="Delete Car"/></center>
+            </form>
+      </div>
             <br />
           <?php
-         include'display.php';
-        //   $users = userList();
-        //   foreach($users as $user) 
-        //   {
-        //         echo $user['id'] . "  " . $user['firstName'] . " " . $user['lastName'];
-        //         //  echo "[<a href='updateUser.php?userId=".$user['id']."'> Update </a>] ";
-        //         //  echo "[<a onclick='return confirmDelete()' href='deleteUser.php?userId=".$user['id']."'> Delete </a>] <br />";
-        //   }
+          include'display.php';
           displayAll();
+                 
          ?>
      
     </body>

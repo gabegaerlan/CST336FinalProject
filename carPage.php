@@ -41,12 +41,32 @@
       </div>
     </nav>
     <!--End Navigation Bar-->
-    
-    <?php
-    include'display.php';
-    displayAll();
-    ?>
-    
-    
+        
+       <?php
+        include'./functions.php';
+        displayAllCars();
+            // DISPLAY CARS FUNCTION
+        echo "<table align = 'center' border = 2 >";
+        echo "<tr>";
+        echo"<th><b>Car Id</b></th>";
+        echo"<th><b>Car Name</b></th>";
+        echo"<th><b>Car Company</b></th>";
+        echo"<th><b>Car Type</b></th>";
+        echo'</tr>';
+     
+        $display = displayAllCars();
+        foreach($display as $d)
+        {
+            echo'<tr>';
+            echo'<td>'.$d['carId'].'</td>';
+            echo'<td>'.$d['carName'].'</td>';
+            echo'<td>'.$d['carCompany'].'</td>';
+            echo'<td>'.$d['carType'].'</td>';
+            echo'</tr>';
+        }
+        echo'</table>';
+        // END DISPLAY CARS
+        ?> 
     </body>
+
 </html>

@@ -43,10 +43,29 @@
     <!--End Navigation Bar-->
     
     <?php
-    include'display.php';
-    displayAll();
-    ?>
+    include'./functions.php';
+    displayAllParts();
+        // DISPLAY CARS FUNCTION
+    echo "<table align = 'center' border = 2 >";
+    echo "<tr>";
+    echo"<th><b>Part Id</b></th>";
+    echo"<th><b>Part Name</b></th>";
+    echo"<th><b>Part Type</b></th>";
+    echo"<th><b>Price</b></th>";
+    echo'</tr>';
     
-    
+    $display = displayAllParts();
+    foreach($display as $d)
+    {
+        echo'<tr>';
+        echo'<td>'.$d['partId'].'</td>';
+        echo'<td>'.$d['partName'].'</td>';
+        echo'<td>'.$d['partType'].'</td>';
+        echo'<td>'.$d['price'].'</td>';
+        echo'</tr>';
+    }
+    echo'</table>';
+    // END DISPLAY CARS
+    ?> 
     </body>
 </html>

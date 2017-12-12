@@ -99,7 +99,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
           <a class="navbar-brand" href="#">Auto Mall</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.php">Home</a></li>
+          <li class="active"><a href="admin.php">Home</a></li>
           <li><a href="#">Cars</a></li>
           <li><a href="#">Parts</a></li>
         </ul>
@@ -115,7 +115,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
         </form>
       <ul class="nav navbar-nav navbar-right">
       <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <!--<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
     </ul>
       </div>
     </nav>

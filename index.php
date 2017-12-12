@@ -22,8 +22,8 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="guest.php">Guest</a></li>
-          <li><a href="#">Cars</a></li>
-          <li><a href="#">Parts</a></li>
+          <li><a href="carPage.php">Cars</a></li>
+          <li><a href="partsPage.php">Parts</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">

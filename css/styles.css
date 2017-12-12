@@ -40,8 +40,17 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #ffffff;
 }
+
 .addCar{
     text-align: center;
     font-family: 'Fugaz One', cursive;
     
+}
+.deleteCar{
+    text-align: center;
+    font-family: 'Fugaz One', cursive;
+}
+
+.deletePage{
+    text-align:center;
 }

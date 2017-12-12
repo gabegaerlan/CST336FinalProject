@@ -16,7 +16,7 @@ function getDatabaseConnection(){
 
 // Create connection
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    // $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $conn;
     
   }

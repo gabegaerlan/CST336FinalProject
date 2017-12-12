@@ -17,7 +17,7 @@ $conn = getDatabaseConnection();
       
         global $conn;
         
-        $sql = "SELECT carName,carCompany,carType,partName,partType,price 
+        $sql = "SELECT carName,carCompany,carType,carId,partName,partType,price 
                 FROM cars
                 JOIN parts
                 ORDER BY carName";
@@ -29,6 +29,7 @@ $conn = getDatabaseConnection();
     }
         echo "<table align = 'center' border = 2 >";
         echo "<tr>";
+        echo"<th><b>Car Id</b></th>";
         echo"<th><b>Car Name</b></th>";
         echo"<th><b>Car Company</b></th>";
         echo"<th><b>Car Type</b></th>";
@@ -41,6 +42,7 @@ $conn = getDatabaseConnection();
         foreach($display as $d)
         {
             echo'<tr>';
+            echo'<td>'.$d['carId'].'</td>';
             echo'<td>'.$d['carName'].'</td>';
             echo'<td>'.$d['carCompany'].'</td>';
             echo'<td>'.$d['carType'].'</td>';
@@ -48,11 +50,9 @@ $conn = getDatabaseConnection();
             echo'<td>'.$d['partType'].'</td>';
             echo'<td>'.$d['price'].'</td>';
             echo'</tr>';
-            
-            
         }
         echo'</table>';
-    
 ?>
+    
     </body>
 </html>
