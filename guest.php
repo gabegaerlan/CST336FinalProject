@@ -50,7 +50,8 @@
     
     <?php
     include'display.php';
-    displayAll();
+    getAllCars();
+    getAllParts();
     ?>
     
     

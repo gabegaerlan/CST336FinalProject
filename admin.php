@@ -114,26 +114,24 @@ function userList(){
     <body>
       <div class="admin">
             <h1>Admin Main</h1>
-
-            
-            <!--<form action="addUser.php">-->
-                
-            <!--    <input type="submit" value="Add New User" />-->
-                
-            <!--</form>-->
             
             <form action="addCar.php" class="addCar">
                 <center><input type="submit" value="Add New Car" /></center>
             </form>
             
             <form action="delete.php" class="deleteCar">
-              <center><input type="submit" value="Delete Car"/></center>
+              <center><input type="submit" value="Update/Delete Car"/></center>
+            </form>
+            
+            <form action="avg.php" class="deleteCar">
+              <input type="submit" name="reports" value="Generate Reports"/>
             </form>
       </div>
             <br />
           <?php
           include'display.php';
-          displayAll();
+          getAllCars();
+          getAllParts();
                  
          ?>
      

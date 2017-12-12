@@ -17,7 +17,8 @@
                 background-image: url("/finalproject/img/typer.jpg");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-position: center; 
+                background-position: center;
+                text-align:center;
             }
         </style>
         <script language="javascript">
@@ -60,7 +61,7 @@
     <!--End Navigation Bar-->
     
     
-    
+    <span class="deletePage">
             <?php
             session_start();
             
@@ -81,7 +82,6 @@
                 return $records;
             }
             
-            echo'<span class="deletePage">';
             
             $cars = carList();
             echo'<table>';
@@ -109,7 +109,6 @@
             }
             
             echo'</table>';
-            echo'</span>';
                 
             ?>
         </span>
