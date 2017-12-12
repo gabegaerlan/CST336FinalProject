@@ -11,7 +11,7 @@
         <style>
             @import url("css/styles.css");
                 body{
-                background-image: url("/finalproject/img/typer.jpg");
+                background-image: url("/finalproject/img/typer.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center; 
