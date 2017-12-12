@@ -9,6 +9,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             @import url('css/styles.css');
+            .deletePage{
+                text-align:center;
+                font-family: 'Fugaz One', cursive;
+            }
         </style>
         <script language="javascript">
             function confirmDelete() 
@@ -28,8 +32,8 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="admin.php">Home</a></li>
-          <li><a href="#">Cars</a></li>
-          <li><a href="#">Parts</a></li>
+          <li><a href="carPage.php">Cars</a></li>
+          <li><a href="partsPage.php">Parts</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">
@@ -49,7 +53,7 @@
     </nav>
     <!--End Navigation Bar-->
     
-    <div class="deletePage">
+    
     
             <?php
             session_start();
@@ -71,6 +75,8 @@
                 return $records;
             }
             
+            echo'<span class="deletePage">';
+            
             $cars = carList();
             echo'<table>';
             echo'<tr>';
@@ -88,17 +94,19 @@
                 echo'<td>'.$c['carName'].'</td>';
                 echo'<td>'.$c['carCompany'].'</td>';
                 echo'<td>'.$c['carType'].'</td>';
-                echo'<td>'."[<a onclick='return confirmDelete()' href='deleteCar.php?carId=".$c['carId']."'> Delete </a>] <br />".'</td>';
+                echo'<td>'."[<a onclick='return confirmDelete()' href='deleteCar.php?carId=".$c['carId']."'> Delete </a>]"."[<a href='update.php?carId=".$c['carId']."'>Update </a>] ".'</td>';
+                // echo'<td>'.'"[<a href='update.php?carId=".$c['carId']."'> Update </a>] "'.'</td>';
                 echo'</tr>';
                 // echo $c['carId']." ".$c['carName']." ".$c['carCompany']." ".$c['carType'];
                 // echo "[<a onclick='return confirmDelete()' href='deleteCar.php?carId=".$c['carId']."'> Delete </a>] <br />";
                 
             }
             
-            echo'</table>'
+            echo'</table>';
+            echo'</span>';
                 
             ?>
-        </div>
+        </span>
     </body>
 </html>
 

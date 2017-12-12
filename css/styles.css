@@ -53,4 +53,10 @@ tr:nth-child(odd) {
 
 .deletePage{
     text-align:center;
+    font-family: 'Fugaz One', cursive;
+}
+
+.updatepage{
+    text-align:center;
+    font-family: 'Fugaz One', cursive;
 }
