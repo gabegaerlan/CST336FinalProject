@@ -60,3 +60,9 @@ tr:nth-child(odd) {
     text-align:center;
     font-family: 'Fugaz One', cursive;
 }
+
+h1{
+  color:black;
+  font-family: 'Fugaz One', cursive;
+  text-align:center;
+}
