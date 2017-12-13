@@ -55,7 +55,6 @@ function loginProcess() {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             @import url("css/styles.css");
-            
         </style>
     </head>
     <body>
@@ -68,7 +67,7 @@ function loginProcess() {
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="#">Cars</a></li>
-          <li><a href="#">Parts</a></li>
+          <li><a href="#">Part</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="/action_page.php">
           <div class="input-group">
