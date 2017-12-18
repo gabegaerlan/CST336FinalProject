@@ -1,11 +1,21 @@
 body{
-    background-image: url("typer.jpg");
+    /*background-image: url("typer.jpg");*/
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
+    text-align:center;
+    font-family: 'Fugaz One', cursive;
 }
 
 .admin-login{
+    text-align:center;
+    font-family: 'Fugaz One', cursive;
+}
+.admin{
+    text-align:center;
+    font-family: 'Fugaz One', cursive;
+}
+.generatedReports{
     text-align:center;
     font-family: 'Fugaz One', cursive;
 }
@@ -62,7 +72,25 @@ tr:nth-child(odd) {
 }
 
 h1{
-  color:black;
+  color:white;
   font-family: 'Fugaz One', cursive;
   text-align:center;
+}
+.cars {
+    /*background-color: white;*/
+    text-align: center;
+    width: 300px;
+    border-style: groove;
+    border-width: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    /*color: black;*/
+}
+
+summary, p {
+    font-size: 150%;
+}
+
+h{
+    font-size:3em;
 }

@@ -14,6 +14,7 @@
     <body>
     
     <!--Navigation Bar-->
+    <!--Navigation Bar-->
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -21,22 +22,15 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="guest.php">Guest</a></li>
           <li><a href="carPage.php">Cars</a></li>
           <li><a href="partsPage.php">Parts</a></li>
+          <li><a href="search.php">Search</a></li>
+          
         </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="search">
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <i class="glyphicon glyphicon-search"></i>
-              </button>
-            </div>
-          </div>
-        </form>
       <ul class="nav navbar-nav navbar-right">
       <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
       </div>
     </nav>
