@@ -58,23 +58,24 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     // using ajax to validate car id
-        function validateCarId(){
+        function validateCarName() {
+                    
             $.ajax({
                 type: "get",
                 url: "api.php",
                 dataType: "json",
                 data: {
-                    'carId': $('#carId').val(),
-                    'action': 'validate-carId'
+                    'carName': $('#carName').val(),
+                    'action': 'validate-carname'
                 },
                 success: function(data,status) {
-                     $('#carId-valid').css("color", "black");
-                    if ($('#carId').val()== data.val()) 
-                    {
-                        $('#carId-valid').html("ID IS NOT AVAILABLE"); 
-                        $('#carId-valid').css("color", "red");
+                    debugger;
+                     $('#carname-valid').css("color", "black");
+                    if (data.length > 0) {
+                        $('#carname-valid').html("Car Name is not available"); 
+                        $('#carname-valid').css("color", "red");
                     } else {
-                        $('#carId-valid').html("CarId is available");
+                        $('#carname-valid').html("Car Name is available");
                     }
                     
                   },
@@ -113,13 +114,13 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
 
     
             <form method="GET">
-                Car Name <input type="text" name="carName" />
+                Car Name: <input onchange="validateCarName();" id='carName' type="text"> <span id="carname-valid"></span></span>
                 <br />
                 Car Company <input type="text" name="carCompany"/>
                 <br/>
                 Car Type <input type= "text" name ="carType"/>
                 <br/>
-                Car ID <input onchange="validateCarId();" type="number" id="carId" name="carId" min="1" max="255"/><span id="carId-valid"></span>
+                Car ID <input type= "text" name ="carId"/>
                 <br />
                 <input type="submit" value="Add Car" name="addCar">
             </form>

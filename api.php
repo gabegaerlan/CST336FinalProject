@@ -12,14 +12,14 @@ function getDatabaseConnection(){
     
   }
 
-function getMatchingID() {
+function matchingName() {
     
-    $carId = $_GET['carId']; 
+    $carName = $_GET['carName']; 
 
     
      $conn = getDatabaseConnection(); 
 
-     $sql = "SELECT * from cars WHERE carId='$carId'"; 
+     $sql = "SELECT * from cars WHERE carName='$carName'"; 
      
      $statement = $conn->prepare($sql); 
     
@@ -29,6 +29,5 @@ function getMatchingID() {
 }
 
 
-getMatchingID(); 
-
+matchingName(); 
 ?>
