@@ -120,7 +120,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
                 <br/>
                 Car Type <input type= "text" name ="carType"/>
                 <br/>
-                Car ID <input type= "text" name ="carId"/>
+                Car ID <input type= "number" name ="carId"/>
                 <br />
                 <input type="submit" value="Add Car" name="addCar">
             </form>
