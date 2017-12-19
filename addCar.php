@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include './database.php';
 $conn = getDatabaseConnection();
 
@@ -7,7 +8,7 @@ $conn = getDatabaseConnection();
       
         global $conn;
         
-        $sql = "SELECT carName,carCompany,carType 
+        $sql = "SELECT carName,carCompany,carType,carId 
                 FROM cars
                 ORDER BY carName";
         $stmt = $conn->prepare($sql);
@@ -39,7 +40,6 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
     
     echo "Car Was Added!";
     // add car end
-    
 }
 
 ?>
@@ -114,7 +114,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
 
     
             <form method="GET">
-                Car Name: <input onchange="validateCarName();" id='carName' type="text"> <span id="carname-valid"></span></span>
+                Car Name: <input onchange="validateCarName();" id='carName' type="text" name="carName"> <span id="carname-valid"></span></span>
                 <br />
                 Car Company <input type="text" name="carCompany"/>
                 <br/>
@@ -127,6 +127,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
             <?php
             echo "<table align = 'center' border = 2 >";
             echo "<tr>";
+            echo"<td><b>ID</b></td>";
             echo"<td><b>Name</b></td>";
             echo"<td><b>Company</b></td>";
             echo"<td><b>Type</b></td>";
@@ -134,6 +135,7 @@ if (isset($_GET['addCar'])) {  //the add form has been submitted
             foreach($car as $c)
             {
                 echo'<tr>';
+                echo'<td>'.$c['carId'].'</td>';
                 echo'<td>'.$c['carName'].'</td>';
                 echo'<td>'.$c['carCompany'].'</td>';
                 echo'<td>'.$c['carType'].'</td>';
